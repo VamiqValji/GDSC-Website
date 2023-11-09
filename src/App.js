@@ -14,6 +14,9 @@ import { NavBar } from './components/NavBar';
 import { Landing } from './components/Landing';
 import { Section1 } from './components/Section1';
 import { Testimonials } from './components/Testimonials';
+import { Section2 } from './components/Section2';
+import { Section3 } from './components/Section3';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
