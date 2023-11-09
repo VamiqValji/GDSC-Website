@@ -7,5 +7,4 @@ export const Landing = ({}) => {
             <Text>landing</Text>
         </>
     )
-    
 }

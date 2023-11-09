@@ -7,5 +7,4 @@ export const NavBar = ({}) => {
             <Text>nav</Text>
         </>
     )
-    
 }
