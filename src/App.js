@@ -2,14 +2,8 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { NavBar } from './components/NavBar';
 import { Landing } from './components/Landing';
 import { Section1 } from './components/Section1';
@@ -17,6 +11,14 @@ import { Testimonials } from './components/Testimonials';
 import { Section2 } from './components/Section2';
 import { Section3 } from './components/Section3';
 import { Footer } from './components/Footer';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
+import { Learn } from './pages/Learn';
+import { Events } from './pages/Events';
+import { Team } from './pages/Team';
+import { Home } from './pages/Home';
 
 function App() {
   return (
@@ -28,8 +30,16 @@ function App() {
         <Section2 />
         <Section3 />
         <Testimonials />
-        <Footer/>
       </Box>
+
+      {/* React Router Switches */}
+      <Routes>
+        <Route path="/team" element={<Team />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer/>
     </ChakraProvider>
   );
 }
