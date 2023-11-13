@@ -2,24 +2,35 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { NavBar } from './components/NavBar';
-import { Landing } from './components/Landing';
+import { Footer } from './components/Footer';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
+import { Learn } from './pages/Learn';
+import { Events } from './pages/Events';
+import { Team } from './pages/Team';
+import { Home } from './pages/Home';
+import './App.css';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box> 
         <NavBar />
-        <Landing />
       </Box>
+
+      {/* React Router Switches */}
+      <Routes>
+        <Route path="/team" element={<Team />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer/>
     </ChakraProvider>
   );
 }
