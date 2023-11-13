@@ -18,7 +18,7 @@ import { Home } from './pages/Home';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box> 
+      <Box fontFamily={"Roboto,RobotoDraft,Helvetica,Arial,sans-serif"}> 
         <NavBar />
       </Box>
 
