@@ -16,7 +16,7 @@ export const Team = ({}) => {
                     representing a diverse range of faculties and academic years. Explore below 
                     to meet our team!
                 </Text>
-                {members.map((member, index) => (
+                {members.map(member => (
                     <MemberCard member={member} />
                 ))}
             </Box>
