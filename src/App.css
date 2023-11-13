@@ -1,0 +1,16 @@
+/* Headlines - Google Sans Bold */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+/* Subheads and Body - Google Sans Regular */
+body, p {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+/* Smaller Text - Open Sans or Roboto Mono */
+.annotations, .footnotes, .small-labels {
+    font-family: 'Open Sans', sans-serif; /* or 'Roboto Mono', monospace; */
+}
