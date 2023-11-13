@@ -14,11 +14,12 @@ import { Learn } from './pages/Learn';
 import { Events } from './pages/Events';
 import { Team } from './pages/Team';
 import { Home } from './pages/Home';
+import './App.css';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box fontFamily={"Roboto,RobotoDraft,Helvetica,Arial,sans-serif"}> 
+      <Box> 
         <NavBar />
       </Box>
 
