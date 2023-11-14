@@ -2,15 +2,18 @@ import {
   Box,
   chakra,
   Container,
+  Image,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaHome, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import React from 'react'
 import { GDSCLogo } from './GDSCLogo'
 import GoogleColors from "../GoogleColors.json"
+import GDSCWhite from "../assets/GDSCWhite.png";
+import { Link } from 'react-router-dom'
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -48,18 +51,19 @@ export const Footer = ({}) => {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <GDSCLogo size={1} color={GoogleColors.grey100} />
-        <Text>© Queen's GDSC. All rights reserved</Text>
+        <Link to="/">
+            <Image src={GDSCWhite} 
+                boxSize='100px'
+                objectFit='contain'
+                alt='GDSC Logo White' 
+            />
+        </Link>
+        <Text>© GDSC Queen's. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
-          </SocialButton>
+          <SocialButton label={'Instagram'} href={'https://www.instagram.com/gdscqueens/'}><FaInstagram /></SocialButton>
+          <SocialButton label={"LinkedIn"} href={'https://www.linkedin.com/company/gdsc-queen-s'}><FaLinkedinIn /></SocialButton>
+          <SocialButton label={"Email"} href={'mailto:20ama12@queensu.ca'}><FaEnvelope /></SocialButton>
+          <SocialButton label={"Home"} href={'https://gdsc.community.dev/queens-university-kingston/'}><FaHome /></SocialButton>
         </Stack>
       </Container>
     </Box>
