@@ -45,10 +45,13 @@ export const Contact = ({}) => {
     const [text, setText] = useState('');
 
     function updateData() {
-      console.log();
+      if (!name || !email || !text) {
+        alert('Please fill in all fields');
+        return;
+      }
       const data = { email, name, text };
     
-      axios.put('http://localhost:3000/insertData', data)
+      axios.post('http://localhost:3001/insertData', data)
         .then(response => {
           console.log('Data updated successfully', response.data);
         })
