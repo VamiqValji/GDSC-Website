@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState } from 'react'
+import axios from 'axios';
 
 import {
   Box,
@@ -38,6 +39,23 @@ const CONFETTI_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2
 
 export const Contact = ({}) => {
     const { hasCopied, onCopy } = useClipboard('example@example.com')
+
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [text, setText] = useState('');
+
+    function updateData() {
+      console.log();
+      const data = { email, name, text };
+    
+      axios.put('http://localhost:3000/insertData', data)
+        .then(response => {
+          console.log('Data updated successfully', response.data);
+        })
+        .catch(error => {
+          console.error('Error updating data', error);
+        });
+    }
 
   return (
     <Flex
@@ -144,7 +162,10 @@ export const Contact = ({}) => {
                       <InputLeftElement>
                         <FaPaypal />
                       </InputLeftElement>
-                      <Input type="text" name="name" placeholder="Your Name" />
+                      <Input type="text" name="name" placeholder="Your Name" 
+                        value={name} 
+                        onChange={(e) => setName(e.target.value)} 
+                      />
                     </InputGroup>
                   </FormControl>
 
@@ -155,7 +176,10 @@ export const Contact = ({}) => {
                       <InputLeftElement>
                         <FaEnvelope />
                       </InputLeftElement>
-                      <Input type="email" name="email" placeholder="Your Email" />
+                      <Input type="email" name="email" placeholder="Your Email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                      />
                     </InputGroup>
                   </FormControl>
 
@@ -167,6 +191,8 @@ export const Contact = ({}) => {
                       placeholder="Your Message"
                       rows={6}
                       resize="none"
+                      value={text} 
+                      onChange={(e) => setText(e.target.value)} 
                     />
                   </FormControl>
 
@@ -177,7 +203,9 @@ export const Contact = ({}) => {
                     _hover={{
                       bg: 'blue.500',
                     }}
-                    width="full">
+                    width="full"
+                    onClick={updateData}
+                    >
                     Send Message
                   </Button>
                 </VStack>
