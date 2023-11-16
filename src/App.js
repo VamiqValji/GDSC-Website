@@ -14,6 +14,7 @@ import { Learn } from './pages/Learn';
 import { Events } from './pages/Events';
 import { Team } from './pages/Team';
 import { Home } from './pages/Home';
+import { Contact } from './pages/Contact'
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>
     </ChakraProvider>
