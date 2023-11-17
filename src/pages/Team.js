@@ -17,12 +17,13 @@ export const Team = ({}) => {
     return (
         <>
             <Box>
-                <Text fontSize={"xxx-large"} fontWeight={"bold"}>Core Team</Text>
+                <Text fontSize={"xxx-large"} fontWeight={"bold"} textAlign={"center"}>Core Team</Text>
                 <Text>
                     Our core team is composed of exceptional talents from Queen's University, 
                     representing a diverse range of faculties and academic years. Explore below 
                     to meet our team!
                 </Text>
+                {/* once have pic of team, have pic on right side of page: https://chakra-templates.dev/page-sections/hero */}
 
                 <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Club Leads</Text>
                 <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center">
