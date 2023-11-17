@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MongoDB Insert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, textarea, button {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MongoDB Insert</h1>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" placeholder="Enter your email">
+
+  <label for="text">Text:</label>
+  <textarea id="text" placeholder="Enter your text"></textarea>
+
+  <button onclick="insertData()">Insert Data</button>
+
+  <script>
+    async function insertData() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const text = document.getElementById('text').value;
+
+      if (!name || !email || !text) {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      try {
+        const response = await fetch('/insertData', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, text }),
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          alert('Data inserted successfully!');
+        } else {
+          alert('Error inserting data. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      }
+    }
+  </script>
+
+</body>
+</html>
