@@ -35,14 +35,11 @@ export const Team = ({}) => {
                     {[members[2], members[3]].map(lead => <MemberCard member={lead} color={colors.blue500} />)}
                 </Flex>
 
-                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Operation Leads</Text>
-                <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center"><MemberCard member={members[4]} color={colors.red500} /></Flex>
-
-                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Partnership Leads</Text>
-                <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center"><MemberCard member={members[5]} color={colors.green500} /></Flex>
-
-                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Marketing Leads</Text>
-                <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center"><MemberCard member={members[6]} color={colors.yellow600} /></Flex>
+                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Operation, Partnership, Marketing Leads</Text>
+                <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center">
+                    {[{m:members[4], c:colors.red500}, {m:members[5], c:colors.green500}, {m:members[6], c:colors.yellow600}].map(lead => 
+                        <MemberCard member={lead.m} color={lead.c} />)}
+                </Flex>
             </Box>
         </>
     )
