@@ -13,6 +13,7 @@ export const MemberCard = ({member}) => {
                             src={pfp}
                             alt='LinkedIn Profile'
                             borderRadius='lg'
+                            fallbackSrc='https://via.placeholder.com/800'
                         />
                         <Stack alignItems={"center"} mt='3' spacing='2'>
                             <Heading size='md'>{name}</Heading>
