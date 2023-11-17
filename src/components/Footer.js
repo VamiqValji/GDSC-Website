@@ -42,7 +42,9 @@ export const Footer = ({}) => {
   return (
     <Box
       bg={GoogleColors.blue500}
-      color={GoogleColors.grey100}>
+      color={GoogleColors.grey100}
+      mt={6}
+      >
       <Container
         as={Stack}
         maxW={'6xl'}

@@ -6,7 +6,7 @@ export const MemberCard = ({member, color=colors.yellow600}) => {
     let { name, linkedIn, pfp, position } = member;
     return (
         <>
-            <Card maxW='xs' boxShadow={"md"} mt={4}>
+            <Card maxW='xs' boxShadow={"md"} mt={4} ml={4} mr={4}>
                 <Link href={linkedIn} isExternal _hover={{textDecoration:"none"}}>
                     <CardBody>
                         <Image
