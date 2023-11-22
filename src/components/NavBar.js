@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import colors from "../GoogleColors.json"
 
 // export const NavBar = ({}) => {
 //     return (
@@ -53,11 +54,11 @@ export const NavBar = ({}) => {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={colors.grey100}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={{ base: 6 }}
+        px={{ base: 10 }}
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -74,19 +75,25 @@ export const NavBar = ({}) => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Flex flexDirection={"row"} alignItems={"center"}>
-            <GDSCLogo size={.4} />
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-                Google Developer Student Clubs
-            </Text>
-          </Flex>
-          {/* 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
-          </Flex> */}
+          <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
+            <Flex direction={"column"}>
+                <Text
+                    color={colors.grey700}
+                    fontSize={20}
+                    fontWeight={500}>
+                    Google Developer Student Clubs
+                </Text>
+                <Text
+                  mt={-1}
+                  color={colors.grey700}
+                  fontSize={14}>
+                  Queen's University
+                </Text>
+            </Flex>
+            {/* 
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex> */}
         </Flex>
 
         <Stack
@@ -106,12 +113,12 @@ export const NavBar = ({}) => {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
+  const linkDefaultColor = colors.grey700;
+  const linkColors = [colors.blue500, colors.red500, colors.green500, colors.yellow600, colors.blue500];
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, i) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
@@ -122,10 +129,11 @@ const DesktopNav = () => {
                   href={navItem.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
-                  color={linkColor}
+                  color={linkDefaultColor}
+                  transition={.25}
                   _hover={{
                     textDecoration: 'none',
-                    color: linkHoverColor,
+                    color: linkColors[i],
                   }}>
                   {navItem.label}
                 </Box>
