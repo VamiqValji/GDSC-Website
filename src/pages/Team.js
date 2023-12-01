@@ -12,7 +12,7 @@ export const Team = ({}) => {
         { name: "Justin Abuyuan", linkedIn: "https://www.linkedin.com/in/justin-abuyuan/", pfp: "https://media.licdn.com/dms/image/D5603AQFA39Ep6OyU6Q/profile-displayphoto-shrink_800_800/0/1697921469015?e=1705536000&v=beta&t=2ARUlBpwPf1iWd8LicFaNwyqYbOxFod9K_Ecvvojt2I", position: "Tech Co-Lead"},
         { name: "Bavneet Kandola", linkedIn: "https://www.linkedin.com/in/bavneet-kandola-a6a036211/", pfp: "https://media.licdn.com/dms/image/D5603AQH_dmedBi-PhA/profile-displayphoto-shrink_800_800/0/1694469014551?e=1705536000&v=beta&t=mfxXsb-jODR5Q1ccNCp1zYT3AKgi79BGtI48slKUWfQ", position: "Operation Manager"},
         { name: "Michael Jin", linkedIn: "https://www.linkedin.com/in/michael-jin-0823a2242", pfp: "https://media.licdn.com/dms/image/D5603AQGVtS2jbaJBZA/profile-displayphoto-shrink_800_800/0/1698963540001?e=1705536000&v=beta&t=AKiKFiDNXko8RM_VKv_rdNYgtA-Wf7ciS7zor_kMPNY", position: "Partnership Lead"},
-        { name: "Sandy Mourad", linkedIn: "https://www.linkedin.com/in/sandy-mourad/", position: "Marketing Lead", pfp: "" }, // waiting
+        { name: "Sandy Mourad", linkedIn: "https://www.linkedin.com/in/sandy-mourad/", position: "Marketing Lead", pfp: "https://media.licdn.com/dms/image/D5603AQHY9SaTWt_AIg/profile-displayphoto-shrink_800_800/0/1701153141149?e=1706745600&v=beta&t=_JdI1qHMkZfdzo6N4smClbWuO8KF0ezcgRkhdfYyEis" },
     ]
 
     const Blob = (props) => (
