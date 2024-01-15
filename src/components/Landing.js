@@ -1,6 +1,6 @@
 import React from 'react'
 import { GDSCLogoView } from './GDSCLogoView';
-import { Grid, GridItem, Box, Flex, Text } from '@chakra-ui/react';
+import { Grid, GridItem, Box, Flex, Text, Button } from '@chakra-ui/react';
 import colors from "../GoogleColors.json";
 
 export const Landing = ({}) => {
@@ -20,6 +20,9 @@ export const Landing = ({}) => {
                     <Flex flexDir={"column"} mt={4} mx={{xl: "0", lg: "0", md: "32", sm: "16"}}>
                         <Text>Google Developer Student Clubs are community groups for college and university students interested in Google developer technologies.</Text>
                         <Text color={'gray.500'} mt={3}>Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</Text>
+                        <Button colorScheme='teal' variant='solid' width="20%" mt={3} bg={colors.blue500} textColor={"white"} _hover={{bg:"#327af0"}} mx={{ base: 'unset', sm: 'auto', lg: 'unset' }}>
+                            Join Us
+                        </Button>
                     </Flex>
                 </Flex>
             </GridItem>

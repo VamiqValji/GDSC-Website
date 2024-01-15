@@ -40,11 +40,11 @@ const TestimonialCarousel = () => {
   
     return (
       <Flex>
-        <Slider {...settings}>
+        {/* <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <Testimonial key={index} testimonial={testimonial} />
           ))}
-        </Slider>
+        </Slider> */}
       </Flex>
     );
   };
