@@ -1,13 +1,18 @@
 import React from 'react'
 import { Box, Text, VStack, Image, Flex } from "@chakra-ui/react";
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
-const Testimonial = ({ testimonial }) => (
+const Testimonial = ({ testimonial }) => {
+    console.log(testimonial)
+    return (
     <Flex>
       {testimonial.image && (<Image borderRadius="full" boxSize="150px" src={testimonial.image} alt={testimonial.name} />)}
       <Text>{testimonial.text}</Text>
-      <Text fontWeight="bold">{testimonial.name}</Text>
+      <Text fontWeight="bold">{testimonial.name}asdasd</Text>
     </Flex>
-);
+)};
   
 const TestimonialCarousel = () => {
     const settings = {
@@ -21,30 +26,31 @@ const TestimonialCarousel = () => {
 
     const testimonials = [
         {
-            name: "adamsd",
+            name: "1",
             text: "rawdawidnaksdnm",
         },
         {
-            name: "adamd",
+            name: "2",
             text: "rawdawidnaksdnm",
         },
         {
-            name: "adaam",
+            name: "3",
             text: "rawdawidnaksdnm",
         },
         {
-            name: "adasm",
+            name: "4",
             text: "rawdawidnaksdnm",
         },
     ]
   
     return (
       <Flex>
-        {/* <Slider {...settings}>
+        <Slider {...settings}>
+            {/* placeholder */}
+        </Slider>
           {testimonials.map((testimonial, index) => (
             <Testimonial key={index} testimonial={testimonial} />
           ))}
-        </Slider> */}
       </Flex>
     );
   };
