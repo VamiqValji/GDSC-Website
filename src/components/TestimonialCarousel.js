@@ -205,7 +205,7 @@ const Slider = ({
           onClick={handleDecrementClick}
           onFocus={handleFocus}
           mr={`${gap / 3}px`}
-          color="gray.200"
+          color={colors.grey700}
           variant="link"
           minW={0}
         >
@@ -216,12 +216,12 @@ const Slider = ({
           value={percentage(activeItem, positions.length - constraint)}
           alignSelf="center"
           borderRadius="2px"
-          bg="base.d100"
+          bg={colors.blue300}
           flex={1}
           h="3px"
           sx={{
             "> div": {
-              backgroundColor: "gray.400"
+              backgroundColor: colors.blue500
             }
           }}
         />
@@ -230,7 +230,7 @@ const Slider = ({
           onClick={handleIncrementClick}
           onFocus={handleFocus}
           ml={`${gap / 3}px`}
-          color="gray.200"
+          color={colors.grey700}
           variant="link"
           zIndex={2}
           minW={0}
@@ -423,22 +423,26 @@ const TestimonialCarousel = () => {
     {
       "name": "Dan",
       "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "color": colors.blue500
     },
     {
       "name": "David",
       "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "color": colors.red500
     },
     {
       "name": "Jeff",
       "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "color": colors.green500
     },
     {
       "name": "Jason",
       "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "color": colors.yellow600
     },
   ]
 
@@ -456,22 +460,22 @@ const TestimonialCarousel = () => {
         }}
       >
         <ChakraCarousel gap={32}>
-          {data.map((post, index) => (
+          {data.map((testimonial, index) => (
             <Flex
               key={index}
               boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 4px 6px"
               justifyContent="space-between"
               flexDirection="column"
               overflow="hidden"
-              color={colors.grey100}
-              bg={colors.blue500}
+              color={"white"}
+              bg={testimonial.color}
               rounded={5}
               flex={1}
               p={5}
               pb="1"
             >
               <VStack mb={6}>
-                <Flex flexDir={"row"} >
+                <Flex flexDir={"row"} mb={1}>
                   <Avatar 
                     src={"https://bit.ly/dan-abramov"} 
                     size={"lg"}
@@ -483,10 +487,10 @@ const TestimonialCarousel = () => {
                     my="auto"
                     ml="2"
                   >
-                    {(post.name)}
+                    {(testimonial.name)}
                   </Heading>
                 </Flex>
-                <Text w="full">{(post.text)}</Text>
+                <Text w="full">{(testimonial.text)}</Text>
               </VStack>
             </Flex>
           ))}
