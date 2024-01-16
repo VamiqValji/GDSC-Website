@@ -20,12 +20,13 @@ import {
   Tag,
   Heading, 
   HStack, 
-  Image
+  Avatar
 } from "@chakra-ui/react";
 
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 import useBoundingRect from "../hooks/useBoundingRect";
+import colors from "../GoogleColors.json"
 
 const MotionFlex = motion(Flex);
 
@@ -417,31 +418,28 @@ const Item = ({
   );
 };
 
-// helper
-function capsFirst(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1)
-}
-
 const TestimonialCarousel = () => {
   const data = [
     {
-      "userId": 1,
-      "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+      "name": "Dan",
+      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
     },
     {
-      "userId": 1,
-      "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+      "name": "David",
+      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
     },
     {
-      "userId": 1,
-      "id": 3,
-      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-    }
+      "name": "Jeff",
+      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+    },
+    {
+      "name": "Jason",
+      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk"
+    },
   ]
 
   return (
@@ -461,47 +459,35 @@ const TestimonialCarousel = () => {
           {data.map((post, index) => (
             <Flex
               key={index}
-              boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+              boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 4px 6px"
               justifyContent="space-between"
               flexDirection="column"
               overflow="hidden"
-              color="gray.300"
-              bg="base.d100"
+              color={colors.grey100}
+              bg={colors.blue500}
               rounded={5}
               flex={1}
               p={5}
+              pb="1"
             >
               <VStack mb={6}>
-                <Heading
-                  fontSize={{ base: "xl", md: "2xl" }}
-                  textAlign="left"
-                  w="full"
-                  mb={2}
-                >
-                  {capsFirst(post.title)}
-                </Heading>
-                <Text w="full">{capsFirst(post.body)}</Text>
+                <Flex flexDir={"row"} >
+                  <Avatar 
+                    src={"https://bit.ly/dan-abramov"} 
+                    size={"lg"}
+                  />
+                  <Heading
+                    fontSize={{ base: "xl", md: "2xl" }}
+                    textAlign="left"
+                    w="full"
+                    my="auto"
+                    ml="2"
+                  >
+                    {(post.name)}
+                  </Heading>
+                </Flex>
+                <Text w="full">{(post.text)}</Text>
               </VStack>
-
-              <Flex justifyContent="space-between">
-                <HStack spacing={2}>
-                  <Tag size="sm" variant="outline" colorScheme="green">
-                    User: {post.userId}
-                  </Tag>
-                  <Tag size="sm" variant="outline" colorScheme="cyan">
-                    Post: {post.id - 5}
-                  </Tag>
-                </HStack>
-                <Button
-                  onClick={() => alert(`Post ${post.id - 5} clicked`)}
-                  colorScheme="green"
-                  fontWeight="bold"
-                  color="gray.900"
-                  size="sm"
-                >
-                  More
-                </Button>
-              </Flex>
             </Flex>
           ))}
         </ChakraCarousel>
