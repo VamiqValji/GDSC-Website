@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Container, Text } from '@chakra-ui/react'
 import React from 'react'
 import { Section } from '../components/Section'
 import { Testimonials } from '../components/Testimonials'
@@ -28,11 +28,10 @@ const Sections = [
 
 export const Home = ({}) => {
     return (
-        <>
-            <Text>Home</Text>
+        <Container maxW={'7xl'}>
             <Landing />
             {Sections.map((section,index) => (<Section key={index} float={index%2===0?"right":"left"} header={section.Header} content={section.Content} picUrl={section.PicURL}/>))}
             <Testimonials />
-        </>
+        </Container>
     )
 }
