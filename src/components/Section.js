@@ -3,8 +3,7 @@ import React from 'react'
 
 export const Section = ({float, header, content, picUrl}) => {
     
-        if(float === "right")
-            return (
+    if(float === "right") return (
         <div style={
             {
                 padding: "4rem",
@@ -13,28 +12,30 @@ export const Section = ({float, header, content, picUrl}) => {
                 justifyContent:'space-between'
             }
         }> 
-        <div style={{
-                width:'21rem',
-            }}>
-            <Text fontSize="6xl">{header}</Text>
-            <Box>
-            <Text noOfLines={[1, 2, 3, 4, 5]}>
-                {content}
-            </Text></Box>
-        </div>
+            <div style={{
+                    width:'21rem',
+                    marginBottom: "auto",
+                    marginTop: "auto",
+                }}>
+                <Text fontSize="6xl">{header}</Text>
+                <Box>
+                <Text noOfLines={[1, 2, 3, 4, 5]}>
+                    {content}
+                </Text></Box>
+            </div>
 
-        <div style={
-                {
-                    width:'40%'
-                }
-            }>
-            <img  src={picUrl} alt='pic'></img>
-        </div>  
+            <div style={
+                    {
+                        width:'40%'
+                    }
+                }>
+                <img  src={picUrl} alt='pic'></img>
+            </div>  
         </div>
-        )
-        
-        
-        return (
+    )
+    
+    // otherwise return left
+    return (
         <div style={
             {
                 padding: "4rem",
@@ -42,25 +43,24 @@ export const Section = ({float, header, content, picUrl}) => {
                 justifyContent:'space-between'
             }
         }>
-        <div style={
-                {
-                    width:'40%'
-                }} >
-            <img
-            src={picUrl} alt='pic'></img>
-        </div>  
-        
-        <div style={{
-                width:'21rem'
-            }}>
-            <Text fontSize="6xl">{header}</Text>
-            <Box >
-            <Text noOfLines={[1, 2, 3, 4]}>
-                {content}
-            </Text>
-            </Box>
+            <div style={
+                    {
+                        width:'40%'
+                    }} >
+                <img
+                src={picUrl} alt='pic'></img>
+            </div>  
+            
+            <div style={{
+                    width:'21rem'
+                }}>
+                <Text fontSize="6xl">{header}</Text>
+                <Box >
+                <Text noOfLines={[1, 2, 3, 4]}>
+                    {content}
+                </Text>
+                </Box>
+            </div>
         </div>
-
-        </div>
-      )
-    }
+    )
+}
