@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import sectionPicCode from '../assets/sectionPicCode.png'
-import sectionPicCreate from '../assets/sectionPicCreate.png'
+import sectionPicCreate from '../assets/sectionPicCreate.jpg'
 import sectionPicCollab from '../assets/sectionPicCollab.png'
 import colors from '../GoogleColors.json'
 
@@ -44,11 +44,44 @@ const sections = [
 ]
 
 export const Sections = () => {
+
+    const left = (section) => {
+        return (
+            <GridItem colSpan={1}>
+                <Flex flexDir={"column"} spacing="20px" height="100%" textAlign={{
+                        base: 'left',
+                        sm: 'center',
+                        md: 'left',
+                    }} 
+                >
+                    <Box my={"auto"}>
+                        <Heading fontSize="5xl" fontWeight="700">
+                        Code.
+                        </Heading>
+                        <chakra.p width={"60%"} mt={4} mx={{ base: "inherit", sm: "auto", md: "inherit" }}>
+                        Meet students interested in developer technologies at your university. All are welcome, including those with diverse backgrounds and different majors.
+                        </chakra.p>
+                    </Box>
+                </Flex>
+            </GridItem>
+        )
+    }
+
+    const right = (section) => {
+        return (
+            <GridItem>
+                <Flex justifyContent={"center"}>
+                    <Image src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"}/>
+                </Flex>
+            </GridItem>
+        )
+    }
+        
     
     return (
         <>
             {sections.map(section => (
-                <Box bg={section.side == "left" ? colors.grey100 : 'white'}>
+                <Box bg={section.side === "left" ? colors.grey100 : 'white'}>
                     <Box as={Container} maxW="7xl" mt={14} p={4}>
                         <Grid
                             templateColumns={{
@@ -56,29 +89,10 @@ export const Sections = () => {
                                 sm: 'repeat(1, 1fr)',
                                 md: 'repeat(2, 1fr)',
                             }}
-                            gap={4}>
-                            <GridItem colSpan={1}>
-                            <Flex flexDir={"column"} spacing="20px" height="100%" textAlign={{
-                                base: 'left',
-                                sm: 'center',
-                                md: 'left',
-                            }} 
-                            >
-                                <Box my={"auto"}>
-                                    <Heading fontSize="5xl" fontWeight="700">
-                                    Code.
-                                    </Heading>
-                                    <chakra.p width={"60%"} mt={4}>
-                                    Meet students interested in developer technologies at your university. All are welcome, including those with diverse backgrounds and different majors.
-                                    </chakra.p>
-                                </Box>
-                            </Flex>
-                            </GridItem>
-                            <GridItem>
-                            <Flex justifyContent={"center"}>
-                                <Image src={sectionPicCode} w="70%" boxShadow={"8px 8px 10px rgba(0,0,0,0.5)"} borderRadius={"8"}/>
-                            </Flex>
-                            </GridItem>
+                            gap={4}
+                        >
+                            {section.side === "left" ? left(section) : right(section)}
+                            {section.side === "left" ? right(section) : left(section)}
                         </Grid>
                     </Box>
                 </Box>
