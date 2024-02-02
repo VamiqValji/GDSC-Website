@@ -56,10 +56,10 @@ export const Sections = () => {
                 >
                     <Box my={"auto"}>
                         <Heading fontSize="5xl" fontWeight="700">
-                        Code.
+                        {section.Header}
                         </Heading>
                         <chakra.p width={"60%"} mt={4} mx={{ base: "inherit", sm: "auto", md: "inherit" }}>
-                        Meet students interested in developer technologies at your university. All are welcome, including those with diverse backgrounds and different majors.
+                        {section.Content}
                         </chakra.p>
                     </Box>
                 </Flex>
@@ -70,8 +70,8 @@ export const Sections = () => {
     const right = (section) => {
         return (
             <GridItem>
-                <Flex justifyContent={"center"}>
-                    <Image src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"}/>
+                <Flex justifyContent={"center"} my={"auto"}>
+                    <Image src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
                 </Flex>
             </GridItem>
         )
@@ -79,10 +79,10 @@ export const Sections = () => {
         
     
     return (
-        <>
+        <Box my={8}>
             {sections.map(section => (
                 <Box bg={section.side === "left" ? colors.grey100 : 'white'}>
-                    <Box as={Container} maxW="7xl" mt={14} p={4}>
+                    <Box as={Container} maxW="7xl" p={4} py={10}>
                         <Grid
                             templateColumns={{
                                 base: 'repeat(1, 1fr)',
@@ -97,6 +97,6 @@ export const Sections = () => {
                     </Box>
                 </Box>
             ))}
-        </>
+        </Box>
     )
 }
