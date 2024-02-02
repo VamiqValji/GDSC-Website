@@ -431,7 +431,7 @@ const TestimonialCarousel = () => {
     },
     {
       "name": "Vamiq Valji",
-      "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills.",
+      "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills. It has not only reinforced my technical proficiency but also grew my soft skills such as leadership and effective communication.",
       "program": "Computing",
       "pfpLink": "https://media.licdn.com/dms/image/D4E03AQEVna_d-t4oZQ/profile-displayphoto-shrink_800_800/0/1704617171459?e=1712188800&v=beta&t=Af7W0S6LW8C7B77wuwiG608vBfrgynBOTfdNo5SG8bY",
       "linkedin": "https://www.linkedin.com/in/vamiq-valji/",
