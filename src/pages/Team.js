@@ -75,7 +75,7 @@ export const Team = ({}) => {
                     position={'relative'}
                     w={'full'}>
                     <Blob
-                        w={'150%'}
+                        w={'110%'}
                         h={'150%'}
                         position={'absolute'}
                         top={'-20%'}
