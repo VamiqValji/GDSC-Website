@@ -421,26 +421,30 @@ const Item = ({
 const TestimonialCarousel = () => {
   const data = [
     {
-      "name": "Dan",
-      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "name": "Abdul Moez Akbar",
+      "text": "It was a privilege to collaborate with a passionate team of students, each driven by the shared goal of reviving and transforming the club. The skills, knowledge, and network I gained through my involvement in the club have played a crucial role in shaping my career path and achieving my current success.",
+      "program": "Computing",
       "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
       "color": colors.blue500
     },
     {
-      "name": "David",
-      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "name": "Vamiq Valji",
+      "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills.",
+      "program": "Computing",
       "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
       "color": colors.red500
     },
     {
-      "name": "Jeff",
-      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "name": "Sandy Mourad",
+      "text": "Joining the Google Developer Student Club has been a game-changer for me especially as a first year. The workshops, supportive community, and real-world projects have accelerated my growth in the tech world. Highly recommend!",
+      "program": "Computing",
       "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
       "color": colors.green500
     },
     {
-      "name": "Jason",
-      "text": "Dawg, I love GDSC. It’s sick and you get to do lots of stuff. I highly recommend joining so you too have a chance of making 6 figures working as a software engineer at Google.",
+      "name": "Becca VanDrunen",
+      "text": "When I got the opportunity to be the first Vice Lead of the Queen's GDSC, I was ecstatic - not only did I have the chance to work with an amazing team of dedicated students to rebuild a club from the ground up, I also had the chance to open new doors that I didn't even know existed. Being a part of this club introduced me to career paths that I didn't know I could take, and helped influence me to get to where I am today!",
+      "program": "MSc in Physics",
       "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
       "color": colors.yellow600
     },
@@ -473,6 +477,7 @@ const TestimonialCarousel = () => {
               flex={1}
               p={5}
               pb="1"
+              // height={"15rem"}
             >
               <VStack mb={6}>
                 <Flex flexDir={"row"} mb={1}>
@@ -480,17 +485,22 @@ const TestimonialCarousel = () => {
                     src={"https://bit.ly/dan-abramov"} 
                     size={"lg"}
                   />
-                  <Heading
-                    fontSize={{ base: "xl", md: "2xl" }}
-                    textAlign="left"
-                    w="full"
-                    my="auto"
-                    ml="2"
-                  >
-                    {(testimonial.name)}
-                  </Heading>
+                  <Flex flexDir={"column"}>
+                    <Heading
+                      fontSize={{ base: "xl", md: "2xl" }}
+                      textAlign="left"
+                      w="full"
+                      mt="auto"
+                      ml="2"
+                    >
+                      {(testimonial.name)}
+                    </Heading>
+                    <Text>{testimonial.program}</Text>
+                  </Flex>
                 </Flex>
-                <Text w="full">{(testimonial.text)}</Text>
+                <Flex height="8rem" overflow="auto" px=".25rem" pb="1rem">
+                  <Text w="full" my="auto">{(testimonial.text)}</Text>
+                </Flex>
               </VStack>
             </Flex>
           ))}
