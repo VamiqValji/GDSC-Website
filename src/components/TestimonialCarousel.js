@@ -20,7 +20,8 @@ import {
   Tag,
   Heading, 
   HStack, 
-  Avatar
+  Avatar,
+  Link
 } from "@chakra-ui/react";
 
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
@@ -424,28 +425,32 @@ const TestimonialCarousel = () => {
       "name": "Abdul Moez Akbar",
       "text": "It was a privilege to collaborate with a passionate team of students, each driven by the shared goal of reviving and transforming the club. The skills, knowledge, and network I gained through my involvement in the club have played a crucial role in shaping my career path and achieving my current success.",
       "program": "Computing",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "pfpLink": "https://media.licdn.com/dms/image/C5603AQGLXcVXfGF7oQ/profile-displayphoto-shrink_800_800/0/1644286713763?e=1712188800&v=beta&t=uWNLJuHspxbhhks0WxReMVO53yrRsNNHhFTHT8Ua2WQ",
+      "linkedin": "https://www.linkedin.com/in/moezakbar/",
       "color": colors.blue500
     },
     {
       "name": "Vamiq Valji",
       "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills.",
       "program": "Computing",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "pfpLink": "https://media.licdn.com/dms/image/D4E03AQEVna_d-t4oZQ/profile-displayphoto-shrink_800_800/0/1704617171459?e=1712188800&v=beta&t=Af7W0S6LW8C7B77wuwiG608vBfrgynBOTfdNo5SG8bY",
+      "linkedin": "https://www.linkedin.com/in/vamiq-valji/",
       "color": colors.red500
     },
     {
       "name": "Sandy Mourad",
       "text": "Joining the Google Developer Student Club has been a game-changer for me especially as a first year. The workshops, supportive community, and real-world projects have accelerated my growth in the tech world. Highly recommend!",
       "program": "Computing",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "pfpLink": "https://media.licdn.com/dms/image/D5603AQHY9SaTWt_AIg/profile-displayphoto-shrink_800_800/0/1701153141149?e=1712188800&v=beta&t=B5sV-sAcGuACUN3_6ASEWQyPjT8Y8Anmipm60prYDGE",
+      "linkedin": "https://www.linkedin.com/in/sandy-mourad/",
       "color": colors.green500
     },
     {
       "name": "Becca VanDrunen",
       "text": "When I got the opportunity to be the first Vice Lead of the Queen's GDSC, I was ecstatic - not only did I have the chance to work with an amazing team of dedicated students to rebuild a club from the ground up, I also had the chance to open new doors that I didn't even know existed. Being a part of this club introduced me to career paths that I didn't know I could take, and helped influence me to get to where I am today!",
       "program": "MSc in Physics",
-      "pfpLink": "https://docs.google.com/persistent/docs/documents/1f0jhce0P0KryHNg6CLAL5dJRQX6pJfNMmcgdV2pzI0k/image/1xZFyTlvwwIy5YsYmfnki72th9B-1qIYGFLnmnk3r5WBk",
+      "pfpLink": "https://media.licdn.com/dms/image/C4D03AQEXXHmtzFu_dA/profile-displayphoto-shrink_800_800/0/1650055366017?e=1712188800&v=beta&t=39owgZJgtM-nbcvfkzd3Xa1sgNwRPegNv08Ay7jr-gk",
+      "linkedin": "https://www.linkedin.com/in/becca-vandrunen-1908211b8/",
       "color": colors.yellow600
     },
   ]
@@ -480,24 +485,26 @@ const TestimonialCarousel = () => {
               // height={"15rem"}
             >
               <VStack mb={6}>
-                <Flex flexDir={"row"} mb={1}>
-                  <Avatar 
-                    src={"https://bit.ly/dan-abramov"} 
-                    size={"lg"}
-                  />
-                  <Flex flexDir={"column"}>
-                    <Heading
-                      fontSize={{ base: "xl", md: "2xl" }}
-                      textAlign="left"
-                      w="full"
-                      mt="auto"
-                      ml="2"
-                    >
-                      {(testimonial.name)}
-                    </Heading>
-                    <Text>{testimonial.program}</Text>
+                <Link to={"/team"} _hover={{textDecor:"none"}}>
+                  <Flex flexDir={"row"} mb={1}>
+                    <Avatar 
+                      src={testimonial.pfpLink} 
+                      size={"lg"}
+                    />
+                    <Flex flexDir={"column"}>
+                      <Heading
+                        fontSize={{ base: "xl", md: "2xl" }}
+                        textAlign="left"
+                        w="full"
+                        mt="auto"
+                        ml="2"
+                      >
+                        {(testimonial.name)}
+                      </Heading>
+                      <Text>{testimonial.program}</Text>
+                    </Flex>
                   </Flex>
-                </Flex>
+                </Link>
                 <Flex height="8rem" overflow="auto" px=".25rem" pb="1rem">
                   <Text w="full" my="auto">{(testimonial.text)}</Text>
                 </Flex>
