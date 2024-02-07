@@ -21,7 +21,7 @@ export const Landing = ({}) => {
                         <Text>Google Developer Student Clubs are community groups for college and university students interested in Google developer technologies.</Text>
                         <Text color={'gray.500'} mt={3}>Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</Text>
                         <Link href='https://discord.gg/xD4ugYZDXX' isExternal>
-                            <Button colorScheme='teal' variant='solid' width="20%" mt={3} bg={colors.blue500} textColor={"white"} _hover={{bg:"#327af0"}} mx={{ base: 'unset', sm: 'auto', lg: 'unset' }}>
+                            <Button colorScheme='teal' variant='solid' width="20%" mt={3} bg={colors.blue500} textColor={"white"} _hover={{bg:"#327af0"}} mx={{ base: 'unset', sm: 'auto', lg: 'unset' }} my={{base: '3'}}>
                                 Join Us 
                             </Button>
                         </Link>
