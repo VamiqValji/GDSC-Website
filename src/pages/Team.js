@@ -75,7 +75,7 @@ export const Team = ({}) => {
                     position={'relative'}
                     w={'full'}>
                     <Blob
-                        w={'150%'}
+                        w={'110%'}
                         h={'150%'}
                         position={'absolute'}
                         top={'-20%'}
@@ -106,7 +106,7 @@ export const Team = ({}) => {
 
     return (
         <>
-            <Box>
+            <Box mb={12}>
                 <Text fontSize={"xxx-large"} fontWeight={"bold"} textAlign={"center"}></Text>
                 {landing()}
 
@@ -115,12 +115,12 @@ export const Team = ({}) => {
                     {[members[0], members[1]].map(lead => <MemberCard member={lead} />)}
                 </Flex>
 
-                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Tech Leads</Text>
+                <Text mt={8} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Tech Leads</Text>
                 <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center">
                     {[members[2], members[3]].map(lead => <MemberCard member={lead} color={colors.blue500} />)}
                 </Flex>
 
-                <Text mt={4} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Operation, Partnership, Marketing Leads</Text>
+                <Text mt={8} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Operation, Partnership, Marketing Leads</Text>
                 <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center">
                     {[{m:members[4], c:colors.red500}, {m:members[5], c:colors.green500}, {m:members[6], c:colors.yellow600}].map(lead => 
                         <MemberCard member={lead.m} color={lead.c} />)}
