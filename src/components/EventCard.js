@@ -1,10 +1,10 @@
-import { Card, CardBody, Image, Stack, Text, CardFooter, Button, Modal, ModalOverlay, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, ModalContent, useDisclosure, Wrap, Badge} from '@chakra-ui/react'
+import { Card, CardBody, Image, Stack, Text, CardFooter, Button, Modal, ModalOverlay, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, ModalContent, useDisclosure, Wrap, Badge } from '@chakra-ui/react'
 import React from 'react';
 
 // Google colours
 import colors from "../GoogleColors.json";
 
-export const EventCard = ({ heading, img, date, text, type, color='black' }) => {
+export const EventCard = ({ heading, img, date, text, detail=text, type, color = 'black' }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
@@ -18,7 +18,7 @@ export const EventCard = ({ heading, img, date, text, type, color='black' }) => 
                     transform: "rotate(2deg) translateY(-1rem)"
                 }}
                 onClick={onOpen}
-            > 
+            >
                 {/* Modal */}
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
@@ -39,7 +39,7 @@ export const EventCard = ({ heading, img, date, text, type, color='black' }) => 
                         </ModalHeader>
                         <ModalCloseButton />
                         <ModalBody>
-                            <Text>{text}</Text>
+                            <Text>{detail}</Text>
                         </ModalBody>
                         <ModalFooter />
                     </ModalContent>
