@@ -1,9 +1,9 @@
 import React from 'react'
 import { GDSCLogoView } from './GDSCLogoView';
-import { Grid, GridItem, Box, Flex, Text, Button, Link } from '@chakra-ui/react';
+import { Grid, GridItem, Flex, Text, Button, Link } from '@chakra-ui/react';
 import colors from "../GoogleColors.json";
 
-export const Landing = ({}) => {
+export const Landing = () => {
     return (
         <Grid templateColumns={{
                 base: "repeat(1, 1fr)", // stacks items vertically on smallest screens

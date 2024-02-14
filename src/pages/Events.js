@@ -7,7 +7,7 @@ import colors from "../GoogleColors.json";
 // Photos
 import eventPic from "../assets/EventsHero.png";
 
-export const Events = ({}) => {
+export const Events = () => {
     const Blob = (props) => (
         <Icon
         width={'100%'}

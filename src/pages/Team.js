@@ -13,7 +13,7 @@ import justinPFP from "../assets/pfps/justin.jpeg"
 import michaelPFP from "../assets/pfps/michael.jpeg"
 import sandyPFP from "../assets/pfps/sandy.jpeg"
 
-export const Team = ({}) => {
+export const Team = () => {
     const members = [
         { name: "Abdulmoez Akbar", linkedIn: "https://www.linkedin.com/in/moezakbar/", pfp: moezPFP, position: "Lead"},
         { name: "Raif Rizwan Karkal", linkedIn: "https://www.linkedin.com/in/raif-rizwan-karkal-a045a4171/", pfp: raifPFP, position: "Vice Lead"},

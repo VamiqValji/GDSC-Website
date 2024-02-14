@@ -1,17 +1,10 @@
 import { 
     Box, 
-    Text,
     Container,
     Heading,
-    SimpleGrid,
-    Icon,
-    Stack,
-    HStack,
-    VStack,
     GridItem,
     chakra,
     Grid,
-    Button,
     Flex,
     Image,
 } from '@chakra-ui/react'

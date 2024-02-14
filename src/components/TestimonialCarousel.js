@@ -17,11 +17,8 @@ import {
   Box,
   Text,
   Container,
-  Tag,
   Heading, 
-  HStack, 
   Avatar,
-  Link
 } from "@chakra-ui/react";
 
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";

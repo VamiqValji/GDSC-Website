@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react'
 import { FaEnvelope, FaHome, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import React from 'react'
-import { GDSCLogo } from './GDSCLogo'
 import GoogleColors from "../GoogleColors.json"
 import GDSCWhite from "../assets/GDSCWhite.png";
 import { Link } from 'react-router-dom'
@@ -38,7 +37,7 @@ const SocialButton = ({ children, label, href }) => {
   )
 }
 
-export const Footer = ({}) => {
+export const Footer = () => {
   return (
     <Box
       bg={GoogleColors.blue500}

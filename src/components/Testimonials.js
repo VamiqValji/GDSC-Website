@@ -1,8 +1,8 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import TestimonialCarousel from './TestimonialCarousel'
 
-export const Testimonials = ({}) => {
+export const Testimonials = () => {
     return (
         <Flex flexDir="column" justifyContent={"center"} textAlign={"center"}>
             <Text>See what others have to say</Text>
