@@ -26,7 +26,7 @@ const sections = [
     {
         Header: "Code.",
         Content: "Meet students interested in developer technologies at your university. All are welcome, including those with diverse backgrounds and different majors.",
-        PicURL: sectionPicCode,
+        PicURL: sectionPicCollab,
         side: "left"
     },
     {
@@ -38,7 +38,7 @@ const sections = [
     {
         Header: "Collaborate.",
         Content: "Apply new learnings to build great solutions for local problems. Advance your skills, career, and network. Give back to your community by helping others learn, too.",
-        PicURL: sectionPicCollab,
+        PicURL: sectionPicCode,
         side: "left"
     }
 ]
