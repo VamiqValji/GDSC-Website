@@ -29,6 +29,12 @@ import { motion, useAnimation, useMotionValue } from "framer-motion";
 import useBoundingRect from "../hooks/useBoundingRect";
 import colors from "../GoogleColors.json"
 
+// pfps
+import sandyPFP from "../assets/pfps/sandy.jpeg"
+import vamiqPFP from "../assets/pfps/vamiq.jpeg"
+import moezPFP from "../assets/pfps/moez.jpeg"
+import beccaPFP from "../assets/pfps/becca.jpeg"
+
 const MotionFlex = motion(Flex);
 
 const transitionProps = {
@@ -425,7 +431,7 @@ const TestimonialCarousel = () => {
       "name": "Abdul Moez Akbar",
       "text": "It was a privilege to collaborate with a passionate team of students, each driven by the shared goal of reviving and transforming the club. The skills, knowledge, and network I gained through my involvement in the club have played a crucial role in shaping my career path and achieving my current success.",
       "program": "Computing",
-      "pfpLink": "https://media.licdn.com/dms/image/C5603AQGLXcVXfGF7oQ/profile-displayphoto-shrink_800_800/0/1644286713763?e=1712188800&v=beta&t=uWNLJuHspxbhhks0WxReMVO53yrRsNNHhFTHT8Ua2WQ",
+      "pfp": moezPFP,
       // "linkedin": "https://www.linkedin.com/in/moezakbar/",
       "color": colors.blue500
     },
@@ -433,7 +439,7 @@ const TestimonialCarousel = () => {
       "name": "Vamiq Valji",
       "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills. It has not only reinforced my technical proficiency but also grew my soft skills such as leadership and effective communication.",
       "program": "Computing",
-      "pfpLink": "https://media.licdn.com/dms/image/D4E03AQEVna_d-t4oZQ/profile-displayphoto-shrink_800_800/0/1704617171459?e=1712188800&v=beta&t=Af7W0S6LW8C7B77wuwiG608vBfrgynBOTfdNo5SG8bY",
+      "pfp": vamiqPFP,
       // "linkedin": "https://www.linkedin.com/in/vamiq-valji/",
       "color": colors.red500
     },
@@ -441,7 +447,7 @@ const TestimonialCarousel = () => {
       "name": "Sandy Mourad",
       "text": "Joining the Google Developer Student Club has been a game-changer for me especially as a first year. The workshops, supportive community, and real-world projects have accelerated my growth in the tech world. Highly recommend!",
       "program": "Computing",
-      "pfpLink": "https://media.licdn.com/dms/image/D5603AQHY9SaTWt_AIg/profile-displayphoto-shrink_800_800/0/1701153141149?e=1712188800&v=beta&t=B5sV-sAcGuACUN3_6ASEWQyPjT8Y8Anmipm60prYDGE",
+      "pfp": sandyPFP,
       // "linkedin": "https://www.linkedin.com/in/sandy-mourad/",
       "color": colors.green500
     },
@@ -449,7 +455,7 @@ const TestimonialCarousel = () => {
       "name": "Becca VanDrunen",
       "text": "When I got the opportunity to be the first Vice Lead of the Queen's GDSC, I was ecstatic - not only did I have the chance to work with an amazing team of dedicated students to rebuild a club from the ground up, I also had the chance to open new doors that I didn't even know existed. Being a part of this club introduced me to career paths that I didn't know I could take, and helped influence me to get to where I am today!",
       "program": "MSc in Physics",
-      "pfpLink": "https://media.licdn.com/dms/image/C4D03AQEXXHmtzFu_dA/profile-displayphoto-shrink_800_800/0/1650055366017?e=1712188800&v=beta&t=39owgZJgtM-nbcvfkzd3Xa1sgNwRPegNv08Ay7jr-gk",
+      "pfp": beccaPFP,
       // "linkedin": "https://www.linkedin.com/in/becca-vandrunen-1908211b8/",
       "color": colors.yellow600
     },
@@ -488,7 +494,7 @@ const TestimonialCarousel = () => {
                 {/* <Link to={"/team"} _hover={{textDecor:"none"}}> */}
                   <Flex flexDir={"row"} mb={1}>
                     <Avatar 
-                      src={testimonial.pfpLink} 
+                      src={testimonial.pfp} 
                       size={"lg"}
                       alt=""
                     />
