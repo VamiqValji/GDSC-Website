@@ -79,6 +79,7 @@ export const Learn = () => {
                     )
                 }
             </SimpleGrid>
+            <Box mb={12}></Box>
         </Container>
     )
 }
