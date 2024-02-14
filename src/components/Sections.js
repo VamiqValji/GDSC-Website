@@ -70,8 +70,8 @@ export const Sections = () => {
     const right = (section) => {
         return (
             <GridItem>
-                <Flex justifyContent={"center"} my={"auto"}>
-                    <Image src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
+                <Flex justifyContent={"center"} my={"auto"} alt="Section Image">
+                    <Image alt="Section Image" src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
                 </Flex>
             </GridItem>
         )
