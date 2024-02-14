@@ -45,7 +45,7 @@ const NAV_ITEMS = [
   { label: 'Team', href: 'team' },
   { label: 'Events', href: 'events' },
   { label: 'Learn', href: 'learn' },
-  { label: 'Contact', href: 'contact' },
+  // { label: 'Contact', href: 'contact' },
 ]
 
 export const NavBar = ({}) => {
