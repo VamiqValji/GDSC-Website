@@ -4,15 +4,24 @@ import { MemberCard } from '../components/MemberCard';
 import colors from "../GoogleColors.json";
 import gdscGroupPic from "../assets/compressedGDSCGroup.jpg";
 
+// pfps
+import vamiqPFP from "../assets/pfps/vamiq.jpeg"
+import moezPFP from "../assets/pfps/moez.jpeg"
+import raifPFP from "../assets/pfps/raif.jpeg"
+import bavneetPFP from "../assets/pfps/bavneet.jpeg"
+import justinPFP from "../assets/pfps/justin.jpeg"
+import michaelPFP from "../assets/pfps/michael.jpeg"
+import sandyPFP from "../assets/pfps/sandy.jpeg"
+
 export const Team = ({}) => {
     const members = [
-        { name: "Abdulmoez Akbar", linkedIn: "https://www.linkedin.com/in/moezakbar/", pfp: "https://media.licdn.com/dms/image/C5603AQGLXcVXfGF7oQ/profile-displayphoto-shrink_800_800/0/1644286713763?e=1705536000&v=beta&t=Y7MiBbHpX27ez4AraXlQDpRmfAHfczEusPz3KAUfUlk", position: "Lead"},
-        { name: "Raif Rizwan Karkal", linkedIn: "https://www.linkedin.com/in/raif-rizwan-karkal-a045a4171/", pfp: "https://media.licdn.com/dms/image/D4D03AQFd6PXqxoS_VA/profile-displayphoto-shrink_800_800/0/1669917474151?e=1705536000&v=beta&t=79wcyTNUSWLF9d4cWtrlA4yNO6MikvrmMw5FF0j6-Ms", position: "Vice Lead"},
-        { name: "Vamiq Valji", linkedIn: "https://www.linkedin.com/in/vamiq-valji/", pfp: "https://media.licdn.com/dms/image/D4E03AQEVna_d-t4oZQ/profile-displayphoto-shrink_800_800/0/1704617171459?e=1710979200&v=beta&t=PXMpsEVUu5MGllpoB-0UhJdYm8CjRhIB2upcE4w4k_k", position: "Tech Lead"},
-        { name: "Justin Abuyuan", linkedIn: "https://www.linkedin.com/in/justin-abuyuan/", pfp: "https://media.licdn.com/dms/image/D5603AQFA39Ep6OyU6Q/profile-displayphoto-shrink_800_800/0/1697921469015?e=1705536000&v=beta&t=2ARUlBpwPf1iWd8LicFaNwyqYbOxFod9K_Ecvvojt2I", position: "Tech Co-Lead"},
-        { name: "Bavneet Kandola", linkedIn: "https://www.linkedin.com/in/bavneet-kandola-a6a036211/", pfp: "https://media.licdn.com/dms/image/D5603AQH_dmedBi-PhA/profile-displayphoto-shrink_800_800/0/1694469014551?e=1705536000&v=beta&t=mfxXsb-jODR5Q1ccNCp1zYT3AKgi79BGtI48slKUWfQ", position: "Operation Manager"},
-        { name: "Michael Jin", linkedIn: "https://www.linkedin.com/in/michael-jin-0823a2242", pfp: "https://media.licdn.com/dms/image/D5603AQGVtS2jbaJBZA/profile-displayphoto-shrink_800_800/0/1698963540001?e=1705536000&v=beta&t=AKiKFiDNXko8RM_VKv_rdNYgtA-Wf7ciS7zor_kMPNY", position: "Partnership Lead"},
-        { name: "Sandy Mourad", linkedIn: "https://www.linkedin.com/in/sandy-mourad/", position: "Marketing Lead", pfp: "https://media.licdn.com/dms/image/D5603AQHY9SaTWt_AIg/profile-displayphoto-shrink_800_800/0/1701153141149?e=1706745600&v=beta&t=_JdI1qHMkZfdzo6N4smClbWuO8KF0ezcgRkhdfYyEis" },
+        { name: "Abdulmoez Akbar", linkedIn: "https://www.linkedin.com/in/moezakbar/", pfp: moezPFP, position: "Lead"},
+        { name: "Raif Rizwan Karkal", linkedIn: "https://www.linkedin.com/in/raif-rizwan-karkal-a045a4171/", pfp: raifPFP, position: "Vice Lead"},
+        { name: "Vamiq Valji", linkedIn: "https://www.linkedin.com/in/vamiq-valji/", pfp: vamiqPFP, position: "Tech Lead"},
+        { name: "Justin Abuyuan", linkedIn: "https://www.linkedin.com/in/justin-abuyuan/", pfp: justinPFP, position: "Tech Co-Lead"},
+        { name: "Bavneet Kandola", linkedIn: "https://www.linkedin.com/in/bavneet-kandola-a6a036211/", pfp: bavneetPFP, position: "Operation Manager"},
+        { name: "Michael Jin", linkedIn: "https://www.linkedin.com/in/michael-jin-0823a2242", pfp: michaelPFP, position: "Partnership Lead"},
+        { name: "Sandy Mourad", linkedIn: "https://www.linkedin.com/in/sandy-mourad/", position: "Marketing Lead", pfp: sandyPFP },
     ]
 
     const Blob = (props) => (
