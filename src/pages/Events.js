@@ -1,6 +1,19 @@
-import { Container, Heading, Stack, Text, Box, Image, Icon, Flex, Divider, AbsoluteCenter, Wrap } from '@chakra-ui/react'
 import { EventCard } from '../components/EventCard'
 import React from 'react'
+import { 
+    Container, 
+    Heading, 
+    Stack, 
+    Text, 
+    Box, 
+    Image, 
+    Icon, 
+    Flex, 
+    Divider, 
+    AbsoluteCenter, 
+    Wrap, 
+    useBreakpointValue
+} from '@chakra-ui/react'
 
 // Google brand colours
 import colors from "../GoogleColors.json";
@@ -51,6 +64,7 @@ export const Events = ({ }) => {
             viewBox="0 0 120 120"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            overflowX="hidden"
             {...props}>
             <path
                 fillRule="evenodd"
@@ -64,16 +78,15 @@ export const Events = ({ }) => {
 
     const Head = () => (
         <>
-            <Container maxW='full'>
-                <Stack direction="column" spacing='7rem'>
-                    <Stack direction={{ base: 'column', md: 'row-reverse' }} align='center'>
-                        <Box mx={{ base: 40 }}>
-                            <Stack direction='column' spacing={{ base: 5, md: 10 }}>
+            <Container maxW='full' overflowX="hidden">
+                <Stack direction="column" spacing='7rem' justify='center'>
+                    <Stack direction={{ base: 'column', md: 'row-reverse' }} align='center' maxW={{ base: '80rem' }} spacing={{ base: '5rem' }}>
+                        <Box mx='5rem'>
+                            <Stack direction='column' spacing={{ base: 5, md: 10 }} minW='28rem'>
                                 <Heading
                                     lineHeight={1.1}
                                     fontWeight={600}
                                     fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
-                                    my={{ base: 2 }}
                                 >
                                     <Text as='span' position='relative'>
                                         Events
@@ -127,12 +140,12 @@ export const Events = ({ }) => {
                     <Box position='relative' padding='10'>
                         <Divider />
                         <AbsoluteCenter bg='white' px='4'>
-                            <Text fontSize='2xl' color='black'>
+                            <Text fontSize={{ base: '2xl', sm: 'xl' }} color='black'>
                                 Upcoming Events
                             </Text>
                         </AbsoluteCenter>
                     </Box>
-                    <Flex justifyContent='center'>
+                    <Flex justifyContent='center' textAlign='center'>
                         <Text>There are currently no upcoming events. Please check again soon.</Text>
                     </Flex>
                     <Box position='relative' padding='10'>
@@ -145,14 +158,14 @@ export const Events = ({ }) => {
                     </Box>
                     {/* Events */}
                     <Stack direction={{ base: 'column', md: 'row' }} spacing='5rem' maxW='100%'>
-                        <Flex alignItems='center'>
+                        <Flex alignItems='center' justifyContent='center' display={{ base: 'none', md: 'flex' }}>
                             <Box maxH='4.5rem' transform={{ base: 'rotate(0deg)', md: 'rotate(-90deg)' }}>
                                 <Heading color='gray.500' fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
                                     <Text>2022{'\n'}2024</Text>
                                 </Heading>
                             </Box>
                         </Flex>
-                        <Wrap spacing='2rem'>
+                        <Wrap spacing='2rem' justify='center'>
                             {cardsData.map((card) => (
                                 <EventCard
                                     heading={card.heading}

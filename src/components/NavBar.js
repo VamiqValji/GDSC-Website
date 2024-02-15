@@ -28,8 +28,6 @@ import {
   PopoverTrigger,
   useColorModeValue,
   useDisclosure,
-  Show,
-  Hide
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -78,14 +76,12 @@ export const NavBar = () => {
             <Flex display={{ base: 'none', md: 'flex' }} direction={"column"}>
               <Text
                     color={colors.grey700}
-                    fontSize={{md: 20, sm: 12}}
                     fontWeight={500}>
                     Google Developer Student Clubs
                 </Text>
                 <Text
                   mt={-1}
-                  color={colors.grey700}
-                  fontSize={{md: 14, sm: 12}}>
+                  color={colors.grey700}>
                   Queen's University
                 </Text>
             </Flex>
