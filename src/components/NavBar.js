@@ -37,7 +37,7 @@ import {
 import { GDSCLogo } from './GDSCLogo'
 
 const NAV_ITEMS = [
-  { label: 'Home', href: '' },
+  { label: 'Home', href: 'home' },
   { label: 'Team', href: 'team' },
   { label: 'Events', href: 'events' },
   { label: 'Learn', href: 'learn' },
@@ -53,7 +53,7 @@ export const NavBar = () => {
         bg={colors.grey100}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
-        py={{ base: 6 }}
+        py={{ base: 6, md: 6, sm: 3 }}
         px={{ base: 10 }}
         borderBottom={1}
         borderStyle={'solid'}
@@ -62,6 +62,7 @@ export const NavBar = () => {
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
+          mr={'-15rem'}
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
@@ -70,26 +71,22 @@ export const NavBar = () => {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 1 }} justifyContent={{ base: 'center', md: 'start' }}>
           <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
             <Flex direction={"column"}>
                 <Text
                     color={colors.grey700}
-                    fontSize={20}
+                    fontSize={{md: 20, sm: 12}}
                     fontWeight={500}>
                     Google Developer Student Clubs
                 </Text>
                 <Text
                   mt={-1}
                   color={colors.grey700}
-                  fontSize={14}>
+                  fontSize={{md: 14, sm: 12}}>
                   Queen's University
                 </Text>
             </Flex>
-            {/* 
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-              <DesktopNav />
-            </Flex> */}
         </Flex>
 
         <Stack
@@ -113,7 +110,7 @@ const DesktopNav = () => {
   const linkColors = [colors.blue500, colors.red500, colors.green500, colors.yellow600, colors.blue500];
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={{ base: 4, md: 4, sm: 0}}>
       {NAV_ITEMS.map((navItem, i) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -156,7 +153,7 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Flex justifyContent={'center'} spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
         as="a"
@@ -196,6 +193,6 @@ const MobileNavItem = ({ label, children, href }) => {
             ))}
         </Stack>
       </Collapse>
-    </Stack>
+    </Flex>
   )
 }
