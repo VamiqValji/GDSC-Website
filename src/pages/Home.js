@@ -1,11 +1,11 @@
-import { Box, Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import React from 'react'
 // import { Section } from '../components/Section'
 import { Sections } from '../components/Sections'
 import { Testimonials } from '../components/Testimonials'
 import { Landing } from '../components/Landing'
 
-export const Home = ({}) => {
+export const Home = () => {
     return (
         <>
             <Container maxW={'7xl'}>

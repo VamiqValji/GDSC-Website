@@ -21,15 +21,12 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
   Popover,
   PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Show,
   Hide
@@ -38,7 +35,6 @@ import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
 } from '@chakra-ui/icons'
 import { GDSCLogo } from './GDSCLogo'
 
@@ -47,10 +43,10 @@ const NAV_ITEMS = [
   { label: 'Team', href: 'team' },
   { label: 'Events', href: 'events' },
   { label: 'Learn', href: 'learn' },
-  { label: 'Contact', href: 'contact' },
+  // { label: 'Contact', href: 'contact' },
 ]
 
-export const NavBar = ({}) => {
+export const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (

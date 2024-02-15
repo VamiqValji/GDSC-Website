@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Heading, Image, Link, Stack, Text } from '@chakra-ui/react'
+import { Card, CardBody, Heading, Image, Link, Stack, Text } from '@chakra-ui/react'
 import React from 'react';
 import colors from "../GoogleColors.json";
 
