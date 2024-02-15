@@ -1,17 +1,10 @@
 import { 
     Box, 
-    Text,
     Container,
     Heading,
-    SimpleGrid,
-    Icon,
-    Stack,
-    HStack,
-    VStack,
     GridItem,
     chakra,
     Grid,
-    Button,
     Flex,
     Image,
 } from '@chakra-ui/react'
@@ -26,7 +19,7 @@ const sections = [
     {
         Header: "Code.",
         Content: "Meet students interested in developer technologies at your university. All are welcome, including those with diverse backgrounds and different majors.",
-        PicURL: sectionPicCode,
+        PicURL: sectionPicCollab,
         side: "left"
     },
     {
@@ -38,7 +31,7 @@ const sections = [
     {
         Header: "Collaborate.",
         Content: "Apply new learnings to build great solutions for local problems. Advance your skills, career, and network. Give back to your community by helping others learn, too.",
-        PicURL: sectionPicCollab,
+        PicURL: sectionPicCode,
         side: "left"
     }
 ]
@@ -70,8 +63,8 @@ export const Sections = () => {
     const right = (section) => {
         return (
             <GridItem>
-                <Flex justifyContent={"center"} my={"auto"}>
-                    <Image src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
+                <Flex justifyContent={"center"} my={"auto"} alt="Section Image">
+                    <Image alt="Section Image" src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
                 </Flex>
             </GridItem>
         )

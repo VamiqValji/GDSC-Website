@@ -1,9 +1,9 @@
 import React from 'react'
 import { GDSCLogoView } from './GDSCLogoView';
-import { Grid, GridItem, Box, Flex, Text, Button, Link } from '@chakra-ui/react';
+import { Grid, GridItem, Flex, Text, Button, Link } from '@chakra-ui/react';
 import colors from "../GoogleColors.json";
 
-export const Landing = ({}) => {
+export const Landing = () => {
     return (
         <Grid templateColumns={{
                 base: "repeat(1, 1fr)", // stacks items vertically on smallest screens
@@ -13,7 +13,7 @@ export const Landing = ({}) => {
             gap={4}
         >
             <GridItem rowSpan={2} colSpan={1}>
-                <Flex flexDir={"column"} height="100%" justifyContent={"center"} textAlign={{base: "center", lg: "left"}} >
+                <Flex flexDir={"column"} height="100%" justifyContent={"center"} textAlign={{base: "center", lg: "left"}} mt={2}>
                     <Text color={colors.red500} fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }} fontWeight={"bold"}>CODE.</Text>
                     <Text color={colors.green500} fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }} fontWeight={"bold"}>CREATE.</Text>
                     <Text color={colors.blue500} fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }} fontWeight={"bold"}>COLLABORATE.</Text>
