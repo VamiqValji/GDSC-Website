@@ -62,7 +62,7 @@ export const NavBar = () => {
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          mr={'-15rem'}
+          mr={{ base: '-5rem', md: '-15rem' }}
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
@@ -73,17 +73,15 @@ export const NavBar = () => {
         </Flex>
         <Flex flex={{ base: 1 }} justifyContent={{ base: 'center', md: 'start' }}>
           <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
-            <Flex direction={"column"}>
-                <Text
+            <Flex display={{ base: 'none', md: 'flex' }} direction={"column"}>
+              <Text
                     color={colors.grey700}
-                    fontSize={{md: 20, sm: 12}}
                     fontWeight={500}>
                     Google Developer Student Clubs
                 </Text>
                 <Text
                   mt={-1}
-                  color={colors.grey700}
-                  fontSize={{md: 14, sm: 12}}>
+                  color={colors.grey700}>
                   Queen's University
                 </Text>
             </Flex>
