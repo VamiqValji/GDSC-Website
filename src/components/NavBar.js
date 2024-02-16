@@ -151,11 +151,12 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Flex justifyContent={'center'} spacing={4} onClick={children && onToggle}>
+    <Flex justifyContent={'center'} spacing={4} onClick={children && onToggle} key={label}>
+      <Link to={href}>
       <Box
         py={2}
-        as="a"
-        href={href ?? '#'}
+        // as="a"
+        // href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -185,12 +186,13 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
+                <Box key={label} py={2}>
+                  {child.label}
+                </Box>
             ))}
         </Stack>
       </Collapse>
+      </Link>
     </Flex>
   )
 }
