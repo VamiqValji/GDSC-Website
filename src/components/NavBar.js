@@ -37,7 +37,7 @@ import {
 import { GDSCLogo } from './GDSCLogo'
 
 const NAV_ITEMS = [
-  { label: 'Home', href: 'home' },
+  { label: 'Home', href: '' },
   { label: 'Team', href: 'team' },
   { label: 'Events', href: 'events' },
   { label: 'Learn', href: 'learn' },
