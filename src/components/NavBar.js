@@ -71,7 +71,7 @@ export const NavBar = () => {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justifyContent={{ base: 'center', md: 'start' }}>
+        <Flex minW={{ base: "115%", md: "50%" }} flex={{ base: 1 }} justifyContent={{ base: 'flex-end', md: 'start' }}>
           <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
             <Flex display={{ base: 'none', md: 'flex' }} direction={"column"}>
               <Text
@@ -108,7 +108,7 @@ const DesktopNav = () => {
   const linkColors = [colors.blue500, colors.red500, colors.green500, colors.yellow600, colors.blue500];
 
   return (
-    <Stack direction={'row'} spacing={{ base: 4, md: 4, sm: 0}}>
+    <Stack display={{ base: "none", md: "flex" }} direction={'row'} spacing={{ base: 4, md: 4, sm: 0}}>
       {NAV_ITEMS.map((navItem, i) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -155,8 +155,6 @@ const MobileNavItem = ({ label, children, href }) => {
       <Link to={href}>
       <Box
         py={2}
-        // as="a"
-        // href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
         _hover={{

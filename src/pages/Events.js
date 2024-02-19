@@ -80,7 +80,7 @@ export const Events = ({ }) => {
         <>
             <Container maxW='full' overflowX="hidden">
                 <Stack direction="column" spacing='7rem' justify='center'>
-                    <Stack direction={{ base: 'column', md: 'row-reverse' }} align='center' maxW={{ base: '80rem' }} spacing={{ base: '5rem' }}>
+                    <Stack direction={{ base: 'column', xl: 'row-reverse' }} align='center' maxW={{ base: '80rem' }} spacing={{ base: '5rem' }}>
                         <Box mx='5rem'>
                             <Stack direction='column' spacing={{ base: 5, md: 10 }} minW='28rem'>
                                 <Heading
@@ -128,6 +128,7 @@ export const Events = ({ }) => {
                                             alt='Hero Image'
                                             fit='cover'
                                             align='center'
+                                            objectFit='cover'
                                             w='100%'
                                             h={{ base: '100%', sm: '110%', lg: '115%' }}
                                             src={eventPic}
