@@ -166,7 +166,7 @@ export const Events = ({ }) => {
                                 </Heading>
                             </Box>
                         </Flex>
-                        <Wrap spacing='2rem' justify='center'>
+                        <Wrap spacing='2rem' justify='center' mb={1}>
                             {cardsData.map((card) => (
                                 <EventCard
                                     heading={card.heading}

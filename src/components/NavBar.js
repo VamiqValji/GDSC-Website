@@ -71,7 +71,7 @@ export const NavBar = () => {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex minW={{ base: "115%", md: "50%" }} flex={{ base: 1 }} justifyContent={{ base: 'flex-end', md: 'start' }}>
+        <Flex w={{ base: "100%", md: "50%" }} ml={{ base: "100%", md: "0" }} flex={{ base: 1 }} justifyContent={{ base: 'flex-end', md: 'start' }}>
           <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
             <Flex display={{ base: 'none', md: 'flex' }} direction={"column"}>
               <Text
