@@ -37,7 +37,7 @@ import {
 import { GDSCLogo } from './GDSCLogo'
 
 const NAV_ITEMS = [
-  { label: 'Home', href: 'home' },
+  { label: 'Home', href: '' },
   { label: 'Team', href: 'team' },
   { label: 'Events', href: 'events' },
   { label: 'Learn', href: 'learn' },
@@ -62,7 +62,7 @@ export const NavBar = () => {
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          mr={'-15rem'}
+          mr={{ base: '-5rem', md: '-15rem' }}
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
@@ -71,19 +71,17 @@ export const NavBar = () => {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justifyContent={{ base: 'center', md: 'start' }}>
+        <Flex w={{ base: "100%", md: "50%" }} ml={{ base: "100%", md: "0" }} flex={{ base: 1 }} justifyContent={{ base: 'flex-end', md: 'start' }}>
           <Box m={2} mt={1} ><GDSCLogo size={.2} /></Box>
-            <Flex direction={"column"}>
-                <Text
+            <Flex display={{ base: 'none', md: 'flex' }} direction={"column"}>
+              <Text
                     color={colors.grey700}
-                    fontSize={{md: 20, sm: 12}}
                     fontWeight={500}>
                     Google Developer Student Clubs
                 </Text>
                 <Text
                   mt={-1}
-                  color={colors.grey700}
-                  fontSize={{md: 14, sm: 12}}>
+                  color={colors.grey700}>
                   Queen's University
                 </Text>
             </Flex>
@@ -110,7 +108,7 @@ const DesktopNav = () => {
   const linkColors = [colors.blue500, colors.red500, colors.green500, colors.yellow600, colors.blue500];
 
   return (
-    <Stack direction={'row'} spacing={{ base: 4, md: 4, sm: 0}}>
+    <Stack display={{ base: "none", md: "flex" }} direction={'row'} spacing={{ base: 4, md: 4, sm: 0}}>
       {NAV_ITEMS.map((navItem, i) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -153,11 +151,10 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Flex justifyContent={'center'} spacing={4} onClick={children && onToggle}>
+    <Flex justifyContent={'center'} spacing={4} onClick={children && onToggle} key={label}>
+      <Link to={href}>
       <Box
         py={2}
-        as="a"
-        href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -187,12 +184,13 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
+                <Box key={label} py={2}>
+                  {child.label}
+                </Box>
             ))}
         </Stack>
       </Collapse>
+      </Link>
     </Flex>
   )
 }
