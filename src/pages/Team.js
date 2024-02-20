@@ -84,11 +84,11 @@ export const Team = () => {
                     position={'relative'}
                     w={'full'}>
                     <Blob
-                        w={'110%'}
-                        h={'150%'}
+                        w={'100%'}
+                        h={'120%'}
                         position={'absolute'}
-                        top={'-20%'}
-                        left={0}
+                        top={'-10%'}
+                        left={-3}
                         zIndex={-1}
                         color={colors.yellow200}
                     />

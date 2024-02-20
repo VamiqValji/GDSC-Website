@@ -78,11 +78,11 @@ export const Events = ({ }) => {
 
     const Head = () => (
         <>
-            <Container maxW='full' overflowX="hidden">
+            <Container maxW={'7xl'}>
                 <Stack direction="column" spacing='7rem' justify='center'>
-                    <Stack direction={{ base: 'column', xl: 'row-reverse' }} align='center' maxW={{ base: '80rem' }} spacing={{ base: '5rem' }}>
-                        <Box mx='5rem'>
-                            <Stack direction='column' spacing={{ base: 5, md: 10 }} minW='28rem'>
+                    <Stack direction={{ base: 'column', xl: 'row-reverse' }} align='center' spacing={{ base: '5rem' }}>
+                        <Box mx='2rem'>
+                            <Stack direction='column' spacing={{ base: 5, md: 10 }} minW={{base:"", md:"28rem"}}>
                                 <Heading
                                     lineHeight={1.1}
                                     fontWeight={600}
@@ -108,13 +108,14 @@ export const Events = ({ }) => {
                                     w='100%'
                                 >
                                     <Blob
-                                        w='100%'
-                                        h='100%'
+                                        w='70%'
+                                        h='90%'
                                         position='absolute'
-                                        left='40%'
-                                        top='28%'
+                                        left='27%'
+                                        top='33%'
                                         zIndex='-1'
                                         color={colors.blue500}
+                                        overflow='hidden'
                                     />
                                     <Box
                                         position='relative'
