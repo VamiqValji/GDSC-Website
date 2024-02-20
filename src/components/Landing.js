@@ -21,7 +21,7 @@ export const Landing = () => {
                         <Text>Google Developer Student Clubs are community groups for college and university students interested in Google developer technologies.</Text>
                         <Text color={'gray.500'} mt={3}>Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</Text>
                         <Link href='https://discord.gg/xD4ugYZDXX' isExternal>
-                            <Button colorScheme='teal' variant='solid' width="20%" mt={3} bg={colors.blue500} textColor={"white"} _hover={{bg:"#327af0"}} mx={{ base: 'unset', sm: 'auto', lg: 'unset' }} my={{base: '3'}}>
+                            <Button colorScheme='teal' variant='solid' maxW="30%" mt={3} bg={colors.blue500} textColor={"white"} _hover={{bg:"#327af0"}} px={2} mx={{ base: 'unset', sm: 'auto', lg: 'unset' }} my={{base: '3'}}>
                                 Join Us 
                             </Button>
                         </Link>
@@ -29,7 +29,7 @@ export const Landing = () => {
                 </Flex>
             </GridItem>
             {/* // 3D logo viewport */}
-            <GridItem rowSpan={2} colSpan={1}> <Flex justifyContent={"center"}> <GDSCLogoView/></Flex></GridItem>
+            <GridItem rowSpan={2} colSpan={1} ><Flex justifyContent={"center"} maxW={"90vw"}> <GDSCLogoView/></Flex></GridItem>
         </Grid>
     )
 }
