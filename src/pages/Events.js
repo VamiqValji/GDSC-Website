@@ -141,7 +141,7 @@ export const Events = () => {
                     <Box position='relative' padding='10'>
                         <Divider />
                         <AbsoluteCenter bg='white' px='4'>
-                            <Text fontSize={{ base: '2xl', sm: 'xl' }} color='black'>
+                            <Text fontSize={{ base: '2xl', sm: 'xl' }} color='black' textAlign={"center"}>
                                 Upcoming Events
                             </Text>
                         </AbsoluteCenter>
@@ -152,7 +152,7 @@ export const Events = () => {
                     <Box position='relative' padding='10'>
                         <Divider />
                         <AbsoluteCenter bg='white' px='4'>
-                            <Text fontSize='2xl' color='black'>
+                            <Text fontSize='2xl' color='black' textAlign={"center"}>
                                 Past Events
                             </Text>
                         </AbsoluteCenter>
