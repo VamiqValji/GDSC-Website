@@ -12,7 +12,6 @@ import {
     Divider, 
     AbsoluteCenter, 
     Wrap, 
-    useBreakpointValue
 } from '@chakra-ui/react'
 
 // Google brand colours
@@ -20,7 +19,7 @@ import colors from "../GoogleColors.json";
 // Photos
 import eventPic from "../assets/EventsHero.png";
 
-export const Events = ({ }) => {
+export const Events = () => {
 
     const cardsData = [
         // GDSC & Google

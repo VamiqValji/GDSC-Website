@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from '@react-three/fiber'
-import { Box } from "@chakra-ui/react";
 
 const GDSC3dLogo = () => {
   const [width, setWidth] = useState(window.innerWidth);

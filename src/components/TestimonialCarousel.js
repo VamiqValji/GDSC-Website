@@ -252,57 +252,57 @@ const Track = ({
   setActiveItem,
   activeItem,
   constraint,
-  multiplier,
+  // multiplier,
   itemWidth,
   positions,
   children
 }) => {
-  const [dragStartPosition, setDragStartPosition] = useState(0);
+  // const [dragStartPosition, setDragStartPosition] = useState(0);
   const controls = useAnimation();
   const x = useMotionValue(0);
   const node = useRef(null);
 
-  const handleDragStart = () => setDragStartPosition(positions[activeItem]);
+  // const handleDragStart = () => setDragStartPosition(positions[activeItem]);
 
-  const handleDragEnd = (_, info) => {
-    console.log(info);
-    const distance = info.offset.x;
-    const velocity = info.velocity.x * multiplier;
-    const direction = velocity < 0 || distance < 0 ? 1 : -1;
+  // const handleDragEnd = (_, info) => {
+  //   console.log(info);
+  //   const distance = info.offset.x;
+  //   const velocity = info.velocity.x * multiplier;
+  //   const direction = velocity < 0 || distance < 0 ? 1 : -1;
 
-    const extrapolatedPosition =
-      dragStartPosition +
-      (direction === 1
-        ? Math.min(velocity, distance)
-        : Math.max(velocity, distance));
+  //   const extrapolatedPosition =
+  //     dragStartPosition +
+  //     (direction === 1
+  //       ? Math.min(velocity, distance)
+  //       : Math.max(velocity, distance));
 
-    const closestPosition = positions.reduce((prev, curr) => {
-      return Math.abs(curr - extrapolatedPosition) <
-        Math.abs(prev - extrapolatedPosition)
-        ? curr
-        : prev;
-    }, 0);
+  //   const closestPosition = positions.reduce((prev, curr) => {
+  //     return Math.abs(curr - extrapolatedPosition) <
+  //       Math.abs(prev - extrapolatedPosition)
+  //       ? curr
+  //       : prev;
+  //   }, 0);
 
-    if (!(closestPosition < positions[positions.length - constraint])) {
-      setActiveItem(positions.indexOf(closestPosition));
-      controls.start({
-        x: closestPosition,
-        transition: {
-          velocity: info.velocity.x,
-          ...transitionProps
-        }
-      });
-    } else {
-      setActiveItem(positions.length - constraint);
-      controls.start({
-        x: positions[positions.length - constraint],
-        transition: {
-          velocity: info.velocity.x,
-          ...transitionProps
-        }
-      });
-    }
-  };
+  //   if (!(closestPosition < positions[positions.length - constraint])) {
+  //     setActiveItem(positions.indexOf(closestPosition));
+  //     controls.start({
+  //       x: closestPosition,
+  //       transition: {
+  //         velocity: info.velocity.x,
+  //         ...transitionProps
+  //       }
+  //     });
+  //   } else {
+  //     setActiveItem(positions.length - constraint);
+  //     controls.start({
+  //       x: positions[positions.length - constraint],
+  //       transition: {
+  //         velocity: info.velocity.x,
+  //         ...transitionProps
+  //       }
+  //     });
+  //   }
+  // };
 
   const handleResize = useCallback(
     () =>
@@ -495,14 +495,13 @@ const TestimonialCarousel = () => {
                       size={"lg"}
                       alt=""
                     />
-                    <Flex flexDir={"column"}>
-                      <Heading
-                        fontSize={{ base: "xl", md: "2xl" }}
-                        textAlign="left"
-                        w="full"
-                        mt="auto"
-                        ml="2"
-                      >
+                    <Flex flexDir={"column"} 
+                      textAlign="left"
+                      w="full"
+                      mt="auto"
+                      ml="2"
+                    >
+                      <Heading fontSize={{ base: "xl", md: "2xl" }}>
                         {(testimonial.name)}
                       </Heading>
                       <Text>{testimonial.program}</Text>
