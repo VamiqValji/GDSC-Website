@@ -16,16 +16,10 @@ import { Team } from './pages/Team';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact'
 import './App.css';
-import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Helmet>
-        <meta name="description" content="Welcome to the official GDSC Queen's University website 🎉, made with love by students! Check out our team, upcoming events, learning, and how to contact us!" />
-        <link rel="icon" type="image/png" href="favicon.ico" />
-        <title>GDSC Queen's 🎉</title>
-      </Helmet>
       <Box> 
         <NavBar />
       </Box>
