@@ -42,7 +42,7 @@ export const Sections = () => {
         return (
             <GridItem colSpan={1}>
                 <Flex flexDir={"column"} spacing="20px" height="100%" textAlign={{
-                        base: 'left',
+                        base: 'center',
                         sm: 'center',
                         md: 'left',
                     }} 
@@ -51,7 +51,7 @@ export const Sections = () => {
                         <Heading fontSize="5xl" fontWeight="700">
                         {section.Header}
                         </Heading>
-                        <chakra.p width={"60%"} mt={4} mx={{ base: "inherit", sm: "auto", md: "inherit" }}>
+                        <chakra.p width={"60%"} mt={4} mx={{ base: "auto", sm: "auto", md: "inherit" }}>
                         {section.Content}
                         </chakra.p>
                     </Box>
@@ -62,8 +62,8 @@ export const Sections = () => {
 
     const right = (section) => {
         return (
-            <GridItem>
-                <Flex justifyContent={"center"} my={"auto"} alt="Section Image">
+            <GridItem my={"auto"}>
+                <Flex justifyContent={"center"} alt="Section Image">
                     <Image alt="Section Image" src={section.PicURL} w="70%" boxShadow={`8px 8px 10px rgba(0,0,0,0.5)`} borderRadius={"8"} my={3}/>
                 </Flex>
             </GridItem>
