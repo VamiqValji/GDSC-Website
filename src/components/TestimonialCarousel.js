@@ -360,11 +360,11 @@ const Track = ({
         <VStack ref={node} spacing={5} alignItems="stretch">
           <MotionFlex
             dragConstraints={node}
-            onDragStart={handleDragStart}
-            onDragEnd={handleDragEnd}
+            // onDragStart={handleDragStart}
+            // onDragEnd={handleDragEnd}
             animate={controls}
             style={{ x }}
-            drag="x"
+            // drag="x"
             _active={{ cursor: "grabbing" }}
             minWidth="min-content"
             flexWrap="nowrap"
