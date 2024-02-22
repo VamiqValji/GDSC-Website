@@ -31,6 +31,7 @@ import sandyPFP from "../assets/pfps/sandy.jpeg"
 import vamiqPFP from "../assets/pfps/vamiq.jpeg"
 import moezPFP from "../assets/pfps/moez.jpeg"
 import beccaPFP from "../assets/pfps/becca.jpeg"
+import jettPFP from "../assets/pfps/jett.jpg"
 
 const MotionFlex = motion(Flex);
 
@@ -425,20 +426,20 @@ const Item = ({
 const TestimonialCarousel = () => {
   const data = [
     {
-      "name": "Abdul Moez Akbar",
-      "text": "It was a privilege to collaborate with a passionate team of students, each driven by the shared goal of reviving and transforming the club. The skills, knowledge, and network I gained through my involvement in the club have played a crucial role in shaping my career path and achieving my current success.",
-      "program": "Computing",
-      "pfp": moezPFP,
-      // "linkedin": "https://www.linkedin.com/in/moezakbar/",
-      "color": colors.blue500
-    },
-    {
       "name": "Vamiq Valji",
       "text": "I've met a lot of amazing people and have felt part of a bigger community while sharpening my teamwork and tech skills. It has not only reinforced my technical proficiency but also grew my soft skills such as leadership and effective communication.",
       "program": "Computing",
       "pfp": vamiqPFP,
       // "linkedin": "https://www.linkedin.com/in/vamiq-valji/",
       "color": colors.red500
+    },
+    {
+      "name": "Abdul Moez Akbar",
+      "text": "It was a privilege to collaborate with a passionate team of students, each driven by the shared goal of reviving and transforming the club. The skills, knowledge, and network I gained through my involvement in the club have played a crucial role in shaping my career path and achieving my current success.",
+      "program": "Computing",
+      "pfp": moezPFP,
+      // "linkedin": "https://www.linkedin.com/in/moezakbar/",
+      "color": colors.blue500
     },
     {
       "name": "Sandy Mourad",
@@ -455,6 +456,14 @@ const TestimonialCarousel = () => {
       "pfp": beccaPFP,
       // "linkedin": "https://www.linkedin.com/in/becca-vandrunen-1908211b8/",
       "color": colors.yellow600
+    },
+    {
+      "name": "Jett Gazeley",
+      "text": "Being a part of the GDSC at Queen's University was invaluable for the growth of my career, professional and personal life. I would highly recommend it to anyone of any discipline who is interested in technology.",
+      "program": "Computing",
+      "pfp": jettPFP,
+      // "linkedin": "https://www.linkedin.com/in/becca-vandrunen-1908211b8/",
+      "color": colors.red500
     },
   ]
 
