@@ -12,6 +12,7 @@ import bavneetPFP from "../assets/pfps/bavneet.jpeg"
 import justinPFP from "../assets/pfps/justin.jpeg"
 import michaelPFP from "../assets/pfps/michael.jpeg"
 import sandyPFP from "../assets/pfps/sandy.jpeg"
+import arjunPFP from "../assets/pfps/arjun.jpeg"
 
 export const Team = () => {
     const members = [
@@ -22,6 +23,7 @@ export const Team = () => {
         { name: "Bavneet Kandola", linkedIn: "https://www.linkedin.com/in/bavneet-kandola-a6a036211/", pfp: bavneetPFP, position: "Operation Manager"},
         { name: "Michael Jin", linkedIn: "https://www.linkedin.com/in/michael-jin-0823a2242", pfp: michaelPFP, position: "Partnership Lead"},
         { name: "Sandy Mourad", linkedIn: "https://www.linkedin.com/in/sandy-mourad/", position: "Marketing Lead", pfp: sandyPFP },
+        { name: "Arjun Devnani", linkedIn: "https://www.linkedin.com/in/arjun-devnani/", pfp: arjunPFP, position: "Core Team Manager"},
     ]
 
     const Blob = (props) => (
@@ -131,7 +133,7 @@ export const Team = () => {
 
                 <Text mt={8} textAlign={"center"} fontSize={"xx-large"} fontWeight={"bold"}>Operation, Partnership, Marketing Leads</Text>
                 <Flex direction={{ base: 'column', md: 'row' }} wrap="wrap" justify="center" align="center">
-                    {[{m:members[4], c:colors.red500}, {m:members[5], c:colors.green500}, {m:members[6], c:colors.yellow600}].map(lead => 
+                    {[{m:members[4], c:colors.red500}, {m:members[5], c:colors.green500}, {m:members[6], c:colors.yellow600}, {m:members[7], c:colors.blue500}].map(lead => 
                         <MemberCard member={lead.m} color={lead.c} />)}
                 </Flex>
             </Box>

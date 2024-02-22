@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Stack, Text, CardFooter, Button, Modal, ModalOverlay, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, ModalContent, useDisclosure, Wrap, Badge } from '@chakra-ui/react'
+import { Card, CardBody, Image, Stack, Text, CardFooter, Modal, ModalOverlay, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, ModalContent, useDisclosure, Wrap, Badge } from '@chakra-ui/react'
 import React from 'react';
 
 // Google colours

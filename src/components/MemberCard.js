@@ -18,7 +18,7 @@ export const MemberCard = ({member, color=colors.yellow600}) => {
                             fallbackSrc='https://via.placeholder.com/800'
                             // boxShadow={"0 0px 5px #0000001A"}
                         />
-                        <Stack alignItems={"center"} mt='3' spacing='2'>
+                        <Stack alignItems={"center"} mt='3' spacing='2' textAlign={"center"}>
                             <Heading size='md'>{name}</Heading>
                             <Text fontWeight={"black"} color={color} fontSize='l'>{position}</Text>
                         </Stack>
